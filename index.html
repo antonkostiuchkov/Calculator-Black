@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+	<title>Actuals</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div class="container">
+ 
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+ 
+            <h1 class="text-center">
+                {Calculate}<br>
+            </h1>
+            <p class="text-center">
+                [ press F5 to reset numbes ]<br>
+            </p>
+        </div>
+    </div>
+
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+			<input type="text" class="form-control" placeholder="Shares average">
+		</div>
+		<div class="col-md-4 column">
+			<input type="text" class="form-control" placeholder="Shares at the end">
+		</div>
+		<div class="col-md-2 column">
+			<input type="text" class="form-control" placeholder="Adjustments">
+		</div>
+		<div class="col-md-2 column">
+			<input type="text" class="form-control" placeholder="New currency">
+		</div>
+	</div>
+
+	<div class="row clearfix">
+
+		<div class="col-md-4 column IS">
+			<div class="input-group">
+				<span class="input-group-addon">EPS</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">GPS</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">GRM</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  SAL, GRI
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control GRM" id="output_text"></div>
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-GRM" data-toggle="detail-GRM"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-GRM">
+				<div class="input-group">
+					<span class="input-group-addon detail">SAL</span>
+					<input type="text" class="form-control SAL" placeholder="">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">CGS</span>
+					<input type="text" class="form-control " placeholder="">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">GRI</span>
+					<input type="text" class="form-control GRI" placeholder="">
+				</div>
+			</div>
+
+
+
+			<div class="input-group">
+				<span class="input-group-addon">DPA</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">OPE</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  RDE, SGE, TCE, DPA
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control OPE" id="output_text"></div>
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-OPE" data-toggle="detail-OPE"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-OPE">
+				<div class="input-group">
+					<span class="input-group-addon detail">RDE</span>
+					<input type="text" class="form-control" placeholder="">
+				</div>
+
+				<div id="detail-SGE">
+					<div class="input-group">
+						<span class="input-group-addon detail detail">SMK</span>
+						<input type="text" class="form-control" placeholder="">
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon detail detail">GAE</span>
+						<input type="text" class="form-control" placeholder="">
+					</div>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">SGE</span>
+					<input type="text" class="form-control" placeholder="">
+					<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-SGE" data-toggle="detail-SGE"><span class="glyphicon glyphicon-wrench"></span></span>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">TCE</span>
+					<input type="text" class="form-control" placeholder="">
+				</div>	
+			</div>	
+			<div class="input-group">
+				<span class="input-group-addon">EBI</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+
+
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">EBT</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  EBI, DPA
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control EBT" id="output_text"></div>
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-EBT" data-toggle="detail-EBT"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-EBT">
+				<div class="input-group">
+					<span class="input-group-addon detail">EBS</span>
+					<div class="form-control EBS" id="output_text"></div>
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">EBP</span>
+					<div class="form-control EBP" id="output_text"></div>
+				</div>	
+			</div>		
+
+			<div class="input-group">
+				<span class="input-group-addon">PRR</span>
+				<input type="text" class="form-control" placeholder="">
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-PRR" data-toggle="detail-PRR"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-PRR">
+				<div class="input-group">
+					<span class="input-group-addon detail">PRE</span>
+					<div class="form-control PRE" id="output_text"></div>
+				</div>
+			</div>
+
+			<div class="input-group">
+				<span class="input-group-addon">TXP</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">TXR</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  PRR, TXP
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control TXR" id="output_text"></div>
+			</div>
+
+			<div class="input-group">
+				<span class="input-group-addon">NER</span>
+				<input type="text" class="form-control" placeholder="">
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-NER" data-toggle="detail-NER"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-NER">
+				<div class="input-group">
+					<span class="input-group-addon detail">NET</span>
+					<div class="form-control NET" id="output_text"></div>
+				</div>
+			</div>
+		</div>	
+
+<!-- BALANCE SHEET -->
+
+		<div class="col-md-4 column BS">
+			<div class="input-group">
+				<span class="input-group-addon">TAS1</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">TAS0</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">SHE1</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">SHE0</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">BPS</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  SHE1, NSO(end)
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control BPS" id="output_text"></div>
+			</div>
+
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">TBV</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  SHE, IBV, NSO(end)
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control TBV" id="output_text"></div>
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-TBV" data-toggle="detail-TBV"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-TBV">
+				<div class="input-group">
+					<span class="input-group-addon detail">IBV</span>
+					<input type="text" class="form-control" placeholder="">
+				</div>
+			</div>
+			
+			
+			<div class="input-group">
+				<span class="input-group-addon">NWC</span>
+				<div class="form-control NWC" id="output_text"></div>
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-NWC" data-toggle="detail-NWC"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-NWC">
+				<div class="input-group">
+					<span class="input-group-addon detail">CA</span>
+					<input type="text" class="form-control" placeholder="Current assets">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">CL</span>
+					<input type="text" class="form-control" placeholder="Current liabilities">
+				</div>
+			</div>
+
+
+			<div class="input-group">
+				<span class="input-group-addon">NDT</span>
+				<div class="form-control NDT" id="output_text"></div>
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-NDT" data-toggle="detail-NDT"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-NDT">
+				<div class="input-group">
+					<span class="input-group-addon detail">Cash</span>
+					<input type="text" class="form-control" placeholder="Cash">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">FL</span>
+					<input type="text" class="form-control" placeholder="Financial liabilities">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">FL</span>
+					<input type="text" class="form-control" placeholder="Financial liabilities">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">FL</span>
+					<input type="text" class="form-control" placeholder="Financial liabilities">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">FL</span>
+					<input type="text" class="form-control" placeholder="Financial liabilities">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">FL</span>
+					<input type="text" class="form-control" placeholder="Financial liabilities">
+				</div>
+			</div>
+
+
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">ENT</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  NDT, P, MNT, NSO(end)
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control ENT" id="output_text"></div>
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-ENT" data-toggle="detail-ENT"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-ENT">
+				<div class="input-group">
+					<span class="input-group-addon detail">P</span>
+					<input type="text" class="form-control" placeholder="Share price (end)">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">MNT</span>
+					<input type="text" class="form-control" placeholder="Non-controling interest">
+				</div>				
+			</div>
+
+
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">ROA</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  NET, TAS 1, TAS 0
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control ROA" id="output_text"></div>
+				<span class="btn input-group-addon">x4</span>
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">ROE</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  NET, SHE 1, She 0
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->				
+				<div class="form-control ROE" id="output_text"></div>
+				<span class="btn input-group-addon">x4</span>
+			</div>
+
+
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">ROC</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  EBI, FA, NWC
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control ROC" id="output_text"></div>
+				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-ROC" data-toggle="detail-ROC"><span class="glyphicon glyphicon-wrench"></span></span>
+			</div>
+			<div id="detail-ROC">
+				<div class="input-group">
+					<span class="input-group-addon detail">FA</span>
+					<input type="text" class="form-control" placeholder="Fixed assets">
+				</div>				
+			</div>
+
+
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">RIC</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  EBI, TXP, TAS 1, SHE 1, MNT
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control RIC" id="output_text"></div>				
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">CRT</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  TCE, SAL
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control CRT" id="output_text"></div>
+			</div>			
+		</div>
+
+<!-- CASH FLOW -->
+		<div class="col-md-4 column CF ">		
+			<div class="input-group">
+				<span class="input-group-addon">CFO</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">CPX</span>
+				<input type="text" class="form-control" placeholder="">
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">FRC</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  CFO, CPX
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control FRC" id="output_text"></div>
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">CPS</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  CFO, NSO
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control CPS" id="output_text"></div>
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">FCF</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  CFO, CPX, NSO
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control FCF" id="output_text"></div>
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">CSH</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Necessary items
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  DPA, NET, NSO
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control CSH" id="output_text"></div>
+			</div>
+		</div>	
+
+
+	</div>
+<!-- BUTTON -->
+<!--     <div class="row clearfix">
+        <div class="col-md-12 column">
+            <button type="button" class="btn btn-lg btn-block" id="ButtonSubmit" onclick="postContactToGoogle()">TRANSMIT</button>
+        </div>
+    </div> -->
+
+
+</div>
+
+        <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    	<script src="app.js"></script>
+</body>
+</html>
