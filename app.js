@@ -1,5 +1,5 @@
 var main = function function_name (argument) {
-	
+
 	$('input').keyup(function () {
 				//var NSO = parseFloat($('.NSO').val()) || 0;
 				//var END = parseFloat($('.END').val()) || 0;
@@ -14,43 +14,56 @@ var main = function function_name (argument) {
 						$('.END').removeClass('equals');
 					};
 
-
+				var ADJ = parseFloat($('.ADJ').val())  || 0;
+				if ($('.ADJ').val() =='') {
+						var PRR = parseFloat($('.PRR').val()) || 0;
+						var PRE = PRR;
+						var NER = parseFloat($('.NER').val())  || 0;
+						var NET = NER;
+				  	} else{
+						var PRR = parseFloat($('.PRR').val())  || 0;
+						var PRE = PRR + ADJ;
+						var NER = parseFloat($('.NER').val())  || 0;
+						var NET = NER + ADJ;
+				  	};
+				var TXP = parseFloat($('.TXP').val()) || 0;
+				var TXR = TXP / PRE * 100 || 0;
+				$('.TXR').html(TXR.toFixed(3));
+				$('.PRE').html(PRE.toFixed(3));
+				$('.NET').html(NET.toFixed(3));
 				 // if ($('.ADJ').val() == '') {
 					// 		$('.col-md-12.reported').animate({
 					// 			width: "100%"
 					// 		},
 					// 		300);
 					// 		$('.input-group.adjusted').addClass('hidden')
-							
+
 				 //  	} else{
-				  		
+
 					// 		$('.col-md-12.reported').animate({
 					// 			width: "290px"
 					// 		},
 					// 		300);
 					// 		$('.input-group.hidden').removeClass('hidden')
-							
+
 				 //  	};
 
-				 // if ($('.SAL').val() > '') {
-					// 		$('#label_text').removeClass('hidden');
-					// 		// $('.input-group.adjusted').addClass('hidden')
-							
-				 //  	} else{
-				  		
-					// 		$('#label_text').addClass('hidden');
-							
-							
-				 //  	};
-
-
-
-
-
-				var SAL = parseFloat($('.SAL').val()) || 0;
-				var GRI = parseFloat($('.GRI').val()) || 0;
-				var GRM = GRI / SAL * 100 || 0;				
+				 var SAL = parseFloat($('.SAL').val()) || 0;
+				 if ($('.GRI').val() > '') {
+						var GRI = parseFloat($('.GRI').val()) || 0;
+						var GRM = GRI / SAL * 100 || 0;
+				  	} else{
+						var CGS = parseFloat($('.CGS').val()) || 0;
+						var GRM = (SAL-CGS) / SAL * 100 || 0;
+				  	};
 				$('.GRM').html(GRM.toFixed(3));
+
+
+
+
+
+
+
 
 
 				var DPA = parseFloat($('.DPA').val()) || 0;
@@ -59,16 +72,14 @@ var main = function function_name (argument) {
 				$('.EBT').html(EBT.toFixed(3));
 
 
-				var PRE = parseFloat($('.PRE').val()) || 0;
-				var TXP = parseFloat($('.TXP').val()) || 0;
-				var TXR = TXP / PRE * 100 || 0;
-				$('.TXR').html(TXR.toFixed(3));
-				
-				var NET = parseFloat($('.form-control.NET').val()) || 0;
-				var EPS = NET / NSO || 0;
-				$('.EPS').html(EPS.toFixed(3) + "     EPS");
 
-				
+
+
+
+				var EPS = NET / NSO || 0;
+				$('.EPS').html(EPS.toFixed(3));
+
+
 
 
 // Balance sheet calculations
@@ -76,15 +87,15 @@ var main = function function_name (argument) {
 	var TAS_1 = parseFloat($('.TAS_1').val()) || 0;
 	var TAS_0 = parseFloat($('.TAS_0').val()) || 0;
 	var ROA = NET / ((TAS_1 + TAS_0) / 2) * 100 || 0;
-	$('.ROA').html(ROA.toFixed(3) + "     ROA");
+	$('.ROA').html(ROA.toFixed(3));
 
 	var SHE_1 = parseFloat($('.SHE_1').val()) || 0;
 	var SHE_0 = parseFloat($('.SHE_0').val()) || 0;
 	var ROE = NET / ((SHE_1 + SHE_0) / 2) * 100 || 0;
-	$('.ROE').html(ROE.toFixed(3) + "     ROE");
+	$('.ROE').html(ROE.toFixed(3));
 
 	var BPS = SHE_1 / END || 0;
-	$('.BPS').html(BPS.toFixed(3) + "     BPS");
+	$('.BPS').html(BPS.toFixed(3));
 
 	var cash = parseFloat($('.cash').val()) || 0;
 	var FL_1 = parseFloat($('.FL_1').val()) || 0;
@@ -92,26 +103,26 @@ var main = function function_name (argument) {
 	var FL_3 = parseFloat($('.FL_3').val()) || 0;
 	var FL_4 = parseFloat($('.FL_4').val()) || 0;
 	var NDT = FL_1 + FL_2 + FL_3 + FL_4 -cash || 0;
-	$('.NDT').html(NDT.toFixed(3) + "     NDT");
+	$('.NDT').html(NDT.toFixed(3));
 
 	var price = parseFloat($('.price').val()) || 0;
 	var MNT = parseFloat($('.MNT').val()) || 0;
 	var ENT = NDT + MNT + (price * END) || 0;
-	$('.ENT').html(ENT.toFixed(3) + "     ENT");
+	$('.ENT').html(ENT.toFixed(3));
 
 // Cash Flow calculations
 
 	var CSH = (DPA + NET) / NSO || 0;
-	$('.CSH').html(CSH.toFixed(3) + "     CSH");
+	$('.CSH').html(CSH.toFixed(3));
 
 	var CFO = parseFloat($('.CFO').val()) || 0;
 	var CPX = parseFloat($('.CPX').val()) || 0;
 	var CPS = CFO / NSO || 0;
 	var FRC = CFO - CPX || 0;
 	var FCF = FRC / NSO || 0;
-	$('.CPS').html(CPS.toFixed(3) + "     CPS");
-	$('.FRC').html(FRC.toFixed(3) + "     FRC");
-	$('.FCF').html(FCF.toFixed(3) + "     FCF");
+	$('.CPS').html(CPS.toFixed(3));
+	$('.FRC').html(FRC.toFixed(3));
+	$('.FCF').html(FCF.toFixed(3));
 
 
 // Math calculations
@@ -142,7 +153,7 @@ var main = function function_name (argument) {
 			$('.TXP').val('')
 			$('.NET').val('')
 			// $('.NER').val('')
-			
+
 		}); //end of reset fun
 
 		$('.reset_BS').click(function () {
@@ -157,37 +168,37 @@ var main = function function_name (argument) {
 			$('.FL_4').val('')
 			$('.price').val('')
 			$('.MNT').val('')
-			
+
 		}); //end of reset fun
 
 		$('.reset_CF').click(function () {
 			$('.CFO').val('')
 			$('.CPX').val('')
-			
-			
+
+
 		}); //end of reset fun
 
-		
+
 
 
 		$('.reset_math').click(function () {
-			$('.plus_1, .plus_2, .plus_3, .plus_4, .plus_5, .minus_1, .minus_2,.minus_3,.minus_4,.minus_5').val('')			
+			$('.plus_1, .plus_2, .plus_3, .plus_4, .plus_5, .minus_1, .minus_2,.minus_3,.minus_4,.minus_5').val('')
 		}); //end of reset fun
 
 
 		$('.reset_all').click(function () {
-			$('.SAL, .GRI, .DPA, .EBI, .PRE, .TXP, .NET,.TAS_1, .TAS_0, SHE_1, .SHE_0, .cash, .FL_1, .FL_2, .FL_3, .FL_4, . price, .MNT,.CFO, .CPX, .plus_1, .plus_2,.plus_3, .plus_4, .plus_5, .minus_1, .minus_2,.minus_3,.minus_4,.minus_5,').val('')			
+			$('.SAL, .GRI, .DPA, .EBI, .PRE, .TXP, .NET,.TAS_1, .TAS_0, SHE_1, .SHE_0, .cash, .FL_1, .FL_2, .FL_3, .FL_4, . price, .MNT,.CFO, .CPX, .plus_1, .plus_2,.plus_3, .plus_4, .plus_5, .minus_1, .minus_2,.minus_3,.minus_4,.minus_5,').val('')
 		}); //end of reset fun
 
 	});  //end of keyup fun
 
 
-	
-	
 
 
-    
-    
+
+
+
+
  //    $(".toggle-btn.IS").click(function(){
  //        $("#Collapsible_IS").hide();
  //        $("#Collapsible_IS").collapse('toggle');
