@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
- 
+
 	<title>Actuals</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -12,10 +12,10 @@
 
 <body>
 <div class="container">
- 
+
     <div class="row clearfix">
         <div class="col-md-12 column">
- 
+
             <h1 class="text-center">
                 {Calculate}<br>
             </h1>
@@ -27,16 +27,16 @@
 
 	<div class="row clearfix">
 		<div class="col-md-4 column">
-			<input type="text" class="form-control" placeholder="Shares average">
+			<input type="text" class="form-control NSO" placeholder="Shares average">
 		</div>
 		<div class="col-md-4 column">
-			<input type="text" class="form-control" placeholder="Shares at the end">
+			<input type="text" class="form-control END" placeholder="Shares at the end">
 		</div>
 		<div class="col-md-2 column">
-			<input type="text" class="form-control" placeholder="Adjustments">
+			<input type="text" class="form-control ADJ" placeholder="Adjustments">
 		</div>
 		<div class="col-md-2 column">
-			<input type="text" class="form-control" placeholder="New currency">
+			<input type="text" class="form-control CUR" placeholder="New currency">
 		</div>
 	</div>
 
@@ -74,7 +74,7 @@
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon detail">CGS</span>
-					<input type="text" class="form-control " placeholder="">
+					<input type="text" class="form-control CGS" placeholder="">
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon detail">GRI</span>
@@ -86,7 +86,7 @@
 
 			<div class="input-group">
 				<span class="input-group-addon">DPA</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control DPA" placeholder="">
 			</div>
 			<div class="input-group po-markup">
 				<span class="input-group-addon po-link">OPE</span>
@@ -106,32 +106,32 @@
 			<div id="detail-OPE">
 				<div class="input-group">
 					<span class="input-group-addon detail">RDE</span>
-					<input type="text" class="form-control" placeholder="">
+					<input type="text" class="form-control RDE" placeholder="">
 				</div>
 
 				<div id="detail-SGE">
 					<div class="input-group">
 						<span class="input-group-addon detail detail">SMK</span>
-						<input type="text" class="form-control" placeholder="">
+						<input type="text" class="form-control SMK" placeholder="">
 					</div>
 					<div class="input-group">
 						<span class="input-group-addon detail detail">GAE</span>
-						<input type="text" class="form-control" placeholder="">
+						<input type="text" class="form-control GAE" placeholder="">
 					</div>
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon detail">SGE</span>
-					<input type="text" class="form-control" placeholder="">
+					<input type="text" class="form-control SGE" placeholder="">
 					<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-SGE" data-toggle="detail-SGE"><span class="glyphicon glyphicon-wrench"></span></span>
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon detail">TCE</span>
-					<input type="text" class="form-control" placeholder="">
-				</div>	
-			</div>	
+					<input type="text" class="form-control TCE" placeholder="">
+				</div>
+			</div>
 			<div class="input-group">
 				<span class="input-group-addon">EBI</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control EBI" placeholder="">
 			</div>
 
 
@@ -158,12 +158,12 @@
 				<div class="input-group">
 					<span class="input-group-addon detail">EBP</span>
 					<div class="form-control EBP" id="output_text"></div>
-				</div>	
-			</div>		
+				</div>
+			</div>
 
 			<div class="input-group">
 				<span class="input-group-addon">PRR</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control PRR" placeholder="">
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-PRR" data-toggle="detail-PRR"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
 			<div id="detail-PRR">
@@ -175,7 +175,7 @@
 
 			<div class="input-group">
 				<span class="input-group-addon">TXP</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control TXP" placeholder="">
 			</div>
 			<div class="input-group po-markup">
 				<span class="input-group-addon po-link">TXR</span>
@@ -194,7 +194,7 @@
 
 			<div class="input-group">
 				<span class="input-group-addon">NER</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control NER" placeholder="">
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-NER" data-toggle="detail-NER"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
 			<div id="detail-NER">
@@ -203,26 +203,26 @@
 					<div class="form-control NET" id="output_text"></div>
 				</div>
 			</div>
-		</div>	
+		</div>
 
 <!-- BALANCE SHEET -->
 
 		<div class="col-md-4 column BS">
 			<div class="input-group">
 				<span class="input-group-addon">TAS1</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control TAS_1" placeholder="">
 			</div>
 			<div class="input-group">
 				<span class="input-group-addon">TAS0</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control TAS_0" placeholder="">
 			</div>
 			<div class="input-group">
 				<span class="input-group-addon">SHE1</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control SHE_1" placeholder="">
 			</div>
 			<div class="input-group">
 				<span class="input-group-addon">SHE0</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control SHE_0" placeholder="">
 			</div>
 			<div class="input-group po-markup">
 				<span class="input-group-addon po-link">BPS</span>
@@ -260,8 +260,8 @@
 					<input type="text" class="form-control" placeholder="">
 				</div>
 			</div>
-			
-			
+
+
 			<div class="input-group">
 				<span class="input-group-addon">NWC</span>
 				<div class="form-control NWC" id="output_text"></div>
@@ -335,7 +335,7 @@
 				<div class="input-group">
 					<span class="input-group-addon detail">MNT</span>
 					<input type="text" class="form-control" placeholder="Non-controling interest">
-				</div>				
+				</div>
 			</div>
 
 
@@ -365,7 +365,7 @@
 			                  NET, SHE 1, She 0
 			              </h4>
 			            </div><!-- ./po-body -->
-				    </div>  <!-- ./po-content -->				
+				    </div>  <!-- ./po-content -->
 				<div class="form-control ROE" id="output_text"></div>
 				<span class="btn input-group-addon">x4</span>
 			</div>
@@ -390,7 +390,7 @@
 				<div class="input-group">
 					<span class="input-group-addon detail">FA</span>
 					<input type="text" class="form-control" placeholder="Fixed assets">
-				</div>				
+				</div>
 			</div>
 
 
@@ -406,7 +406,7 @@
 			              </h4>
 			            </div><!-- ./po-body -->
 				    </div>  <!-- ./po-content -->
-				<div class="form-control RIC" id="output_text"></div>				
+				<div class="form-control RIC" id="output_text"></div>
 			</div>
 			<div class="input-group po-markup">
 				<span class="input-group-addon po-link">CRT</span>
@@ -421,11 +421,11 @@
 			            </div><!-- ./po-body -->
 				    </div>  <!-- ./po-content -->
 				<div class="form-control CRT" id="output_text"></div>
-			</div>			
+			</div>
 		</div>
 
 <!-- CASH FLOW -->
-		<div class="col-md-4 column CF ">		
+		<div class="col-md-4 column CF ">
 			<div class="input-group">
 				<span class="input-group-addon">CFO</span>
 				<input type="text" class="form-control" placeholder="">
@@ -490,7 +490,7 @@
 				    </div>  <!-- ./po-content -->
 				<div class="form-control CSH" id="output_text"></div>
 			</div>
-		</div>	
+		</div>
 
 
 	</div>
