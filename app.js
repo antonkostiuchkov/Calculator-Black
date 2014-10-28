@@ -58,28 +58,13 @@ var main = function function_name (argument) {
 				  	};
 				$('.GRM').html(GRM.toFixed(3));
 
-
-
-
-
-
-
-
-
 				var DPA = parseFloat($('.DPA').val()) || 0;
 				var EBI = parseFloat($('.EBI').val()) || 0;
 				var EBT = DPA + EBI || 0;
 				$('.EBT').html(EBT.toFixed(3));
 
-
-
-
-
-
 				var EPS = NET / NSO || 0;
 				$('.EPS').html(EPS.toFixed(3));
-
-
 
 
 // Balance sheet calculations
@@ -87,22 +72,34 @@ var main = function function_name (argument) {
 	var TAS_1 = parseFloat($('.TAS_1').val()) || 0;
 	var TAS_0 = parseFloat($('.TAS_0').val()) || 0;
 	var ROA = NET / ((TAS_1 + TAS_0) / 2) * 100 || 0;
-	$('.ROA').html(ROA.toFixed(3));
+	var ROAx4 = NET / ((TAS_1 + TAS_0) / 2) * 400 || 0;
+		$('.ROA').html(ROA.toFixed(3));
+		$('.ROAx4').html(ROAx4.toFixed(3));
+
 
 	var SHE_1 = parseFloat($('.SHE_1').val()) || 0;
 	var SHE_0 = parseFloat($('.SHE_0').val()) || 0;
 	var ROE = NET / ((SHE_1 + SHE_0) / 2) * 100 || 0;
-	$('.ROE').html(ROE.toFixed(3));
+	var ROEx4 = NET / ((SHE_1 + SHE_0) / 2) * 400 || 0;
+		$('.ROE').html(ROE.toFixed(3));
+		$('.ROEx4').html(ROEx4.toFixed(3));
+	
 
 	var BPS = SHE_1 / END || 0;
 	$('.BPS').html(BPS.toFixed(3));
+
+	var CA = parseFloat($('.CA').val()) || 0;
+	var CL = parseFloat($('.CL').val()) || 0;
+	var NWC = CA - CL || 0;
+	$('.NWC').html(NWC.toFixed(3));
 
 	var cash = parseFloat($('.cash').val()) || 0;
 	var FL_1 = parseFloat($('.FL_1').val()) || 0;
 	var FL_2 = parseFloat($('.FL_2').val()) || 0;
 	var FL_3 = parseFloat($('.FL_3').val()) || 0;
 	var FL_4 = parseFloat($('.FL_4').val()) || 0;
-	var NDT = FL_1 + FL_2 + FL_3 + FL_4 -cash || 0;
+	var FL_5 = parseFloat($('.FL_5').val()) || 0;
+	var NDT = FL_1 + FL_2 + FL_3 + FL_4 + FL_5 - cash || 0;
 	$('.NDT').html(NDT.toFixed(3));
 
 	var price = parseFloat($('.price').val()) || 0;
@@ -209,6 +206,8 @@ var main = function function_name (argument) {
  //        $("#Collapsible_BS").hide();
  //        $("#Collapsible_BS").collapse('toggle');
  //    });
+
+
 
 
 
