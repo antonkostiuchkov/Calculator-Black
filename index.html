@@ -255,9 +255,37 @@
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-TBV" data-toggle="detail-TBV"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
 			<div id="detail-TBV">
-				<div class="input-group">
-					<span class="input-group-addon detail">IBV</span>
+				<div class="input-group po-markup">
+					<span class="input-group-addon po-link detail">IBV</span>
+						<div class="po-content hidden">
+				          	<div class="po-title">
+				            	Intangible assets
+				            </div> <!-- ./po-title -->
+				            <div class="po-body">
+				              <h4 class="text-center">
+				                  Goodwill + Other int. assets
+				              </h4>
+				            </div><!-- ./po-body -->
+					    </div>  <!-- ./po-content -->
 					<input type="text" class="form-control" placeholder="">
+				</div>
+				<div class="input-group detail">
+					<span class="input-group-addon detail">FA</span>
+					<input type="text" class="form-control FA" placeholder="Fixed (tangible) assets">
+				</div>
+				<div class="input-group po-markup">
+					<span class="input-group-addon po-link detail">TNB</span>
+						<div class="po-content hidden">
+				          	<div class="po-title">
+				            	Necessary items
+				            </div> <!-- ./po-title -->
+				            <div class="po-body">
+				              <h4 class="text-center">
+				                  SHE 1, IBV
+				              </h4>
+				            </div><!-- ./po-body -->
+					    </div>  <!-- ./po-content -->
+					<div class="form-control TNB" id="output_text"></div>
 				</div>
 			</div>
 
@@ -383,17 +411,8 @@
 			              </h4>
 			            </div><!-- ./po-body -->
 				    </div>  <!-- ./po-content -->
-				<div class="form-control ROC" id="output_text"></div>
-				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-ROC" data-toggle="detail-ROC"><span class="glyphicon glyphicon-wrench"></span></span>
+				<div class="form-control ROC" id="output_text"></div>				
 			</div>
-			<div id="detail-ROC">
-				<div class="input-group">
-					<span class="input-group-addon detail">FA</span>
-					<input type="text" class="form-control" placeholder="Fixed assets">
-				</div>
-			</div>
-
-
 			<div class="input-group po-markup">
 				<span class="input-group-addon po-link">RIC</span>
 					<div class="po-content hidden">
@@ -407,6 +426,21 @@
 			            </div><!-- ./po-body -->
 				    </div>  <!-- ./po-content -->
 				<div class="form-control RIC" id="output_text"></div>
+			</div>
+			<div class="input-group po-markup">
+				<span class="input-group-addon po-link">RNA</span>
+					<div class="po-content hidden">
+			          	<div class="po-title">
+			            	Return on net operating assets
+			            </div> <!-- ./po-title -->
+			            <div class="po-body">
+			              <h4 class="text-center">
+			                  NET, FA (in TBV), NWC
+			              </h4>
+			            </div><!-- ./po-body -->
+				    </div>  <!-- ./po-content -->
+				<div class="form-control RNA" id="output_text"></div>
+				<span class="input-group-addon RNAx4">x4</span>
 			</div>
 			<div class="input-group po-markup">
 				<span class="input-group-addon po-link">CRT</span>

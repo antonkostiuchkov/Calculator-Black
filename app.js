@@ -107,6 +107,12 @@ var main = function function_name (argument) {
 	var ENT = NDT + MNT + (price * END) || 0;
 	$('.ENT').html(ENT.toFixed(3));
 
+	var FA = parseFloat($('.FA').val()) || 0;
+	var RNA = NET / (FA + NWC) || 0;	
+	var RNAx4 = RNA * 4 || 0;
+		$('.RNA').html(RNA.toFixed(3));		
+		$('.RNAx4').html(RNAx4.toFixed(3));
+
 // Cash Flow calculations
 
 	var CSH = (DPA + NET) / NSO || 0;
