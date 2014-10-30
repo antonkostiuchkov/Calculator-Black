@@ -145,8 +145,12 @@ var main = function function_name (argument) {
 	var minus_3 = parseFloat($('.minus_3').val()) || 0;
 	var minus_4 = parseFloat($('.minus_4').val()) || 0;
 	var minus_5 = parseFloat($('.minus_5').val()) || 0;
-	var result = plus_1 + plus_2 + plus_3 + plus_4 + plus_5 - minus_1 - minus_2 - minus_3 - minus_4 - minus_5 || 0;
-	$('.result').html(result.toFixed(3));
+	var DIV = parseFloat($('.DIV').val()) || 1;
+	var MUL = parseFloat($('.MUL').val()) || 1;
+	var SUM = plus_1 + plus_2 + plus_3 + plus_4 + plus_5 - minus_1 - minus_2 - minus_3 - minus_4 - minus_5 || 0;
+	$('.SUM').html(SUM.toFixed(3));
+	var RES = SUM / DIV * MUL || 0;
+	$('.RES').html(RES.toFixed(3));
 
 // Reset calculations
 
