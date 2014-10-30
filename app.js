@@ -83,7 +83,7 @@ var main = function function_name (argument) {
 	var ROEx4 = NET / ((SHE_1 + SHE_0) / 2) * 400 || 0;
 		$('.ROE').html(ROE.toFixed(3));
 		$('.ROEx4').html(ROEx4.toFixed(3));
-	
+
 
 	var BPS = SHE_1 / END || 0;
 	$('.BPS').html(BPS.toFixed(3));
@@ -108,10 +108,15 @@ var main = function function_name (argument) {
 	$('.ENT').html(ENT.toFixed(3));
 
 	var FA = parseFloat($('.FA').val()) || 0;
-	var RNA = NET / (FA + NWC) || 0;	
+	var RNA = NET / (FA + NWC) || 0;
 	var RNAx4 = RNA * 4 || 0;
-		$('.RNA').html(RNA.toFixed(3));		
+		$('.RNA').html(RNA.toFixed(3));
 		$('.RNAx4').html(RNAx4.toFixed(3));
+
+
+	var TCE = parseFloat($('.FA').val()) || 0;
+	var CRT = TCE / SAL *100 || 0;
+	$('.CRT').html(CRT.toFixed(3));
 
 // Cash Flow calculations
 
