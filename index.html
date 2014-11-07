@@ -11,6 +11,28 @@
 </head>
 
 <body>
+<div class="header">
+
+		<nav class="navbar navbar-inverse" role="navigation">
+        	<div class="navbar-header">	           
+	            <a href="#" class="navbar-brand scroll-top">TOP</a>
+	            <a href="#" class="navbar-brand scroll-link" data-id="income_statement">Income Statement</a>
+	            <a href="#" class="navbar-brand scroll-link" data-id="balance_sheet">Balance Sheet</a>
+	            <a href="#" class="navbar-brand scroll-link" data-id="cash_flow">Cash Flow</a>
+	            <a href="#" class="navbar-brand scroll-link" data-id="math">+ -</a>
+
+        	</div>
+        	<!--/.navbar-header-->
+	    </nav>
+	    <!--/.navbar-->
+
+</div>
+<!--/.header-->
+
+
+
+
+
 <div class="container">
 
     <div class="row clearfix">
@@ -28,7 +50,8 @@
 	<div class="row clearfix">
 		<div class="col-md-4 column">
 			<input type="text" class="form-control NSO" placeholder="Shares average">
-		</div>
+		</div>		
+		
 		<div class="col-md-4 column">
 			<input type="text" class="form-control END" placeholder="Shares at the end">
 		</div>
@@ -42,14 +65,11 @@
 
 	<div class="row clearfix">
 
-		<div class="col-md-4 column IS">
-			<div class="input-group">
-				<span class="input-group-addon">EPS</span>
-				<input type="text" class="form-control" placeholder="">
-			</div>
+		<div class="col-md-4 column" id="income_statement">
+			
 			<div class="input-group">
 				<span class="input-group-addon">GPS</span>
-				<input type="text" class="form-control" placeholder="">
+				<input type="text" class="form-control GPS" placeholder="">
 			</div>
 
 			<div class="input-group po-markup">
@@ -67,7 +87,7 @@
 				<div class="form-control GRM" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-GRM" data-toggle="detail-GRM"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-GRM">
+			<div id="detail-GRM" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">SAL</span>
 					<input type="text" class="form-control SAL" placeholder="">
@@ -84,10 +104,7 @@
 
 
 
-			<div class="input-group">
-				<span class="input-group-addon">DPA</span>
-				<input type="text" class="form-control DPA" placeholder="">
-			</div>
+			
 			<div class="input-group po-markup">
 				<span class="input-group-addon po-link">OPE</span>
 					<div class="po-content hidden">
@@ -103,13 +120,19 @@
 				<div class="form-control OPE" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-OPE" data-toggle="detail-OPE"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-OPE">
+			<div id="detail-OPE" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">RDE</span>
 					<input type="text" class="form-control RDE" placeholder="">
 				</div>
 
-				<div id="detail-SGE">
+				
+				<div class="input-group">
+					<span class="input-group-addon detail">SGE</span>
+					<input type="text" class="form-control SGE" placeholder="">
+					<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-SGE" data-toggle="detail-SGE"><span class="glyphicon glyphicon-wrench"></span></span>
+				</div>
+				<div id="detail-SGE" class="small">
 					<div class="input-group">
 						<span class="input-group-addon detail detail">SMK</span>
 						<input type="text" class="form-control SMK" placeholder="">
@@ -120,14 +143,13 @@
 					</div>
 				</div>
 				<div class="input-group">
-					<span class="input-group-addon detail">SGE</span>
-					<input type="text" class="form-control SGE" placeholder="">
-					<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-SGE" data-toggle="detail-SGE"><span class="glyphicon glyphicon-wrench"></span></span>
-				</div>
-				<div class="input-group">
 					<span class="input-group-addon detail">TCE</span>
 					<input type="text" class="form-control TCE" placeholder="">
 				</div>
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">DPA</span>
+				<input type="text" class="form-control DPA" placeholder="">
 			</div>
 			<div class="input-group">
 				<span class="input-group-addon">EBI</span>
@@ -150,7 +172,7 @@
 				<div class="form-control EBT" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-EBT" data-toggle="detail-EBT"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-EBT">
+			<div id="detail-EBT" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">EBS</span>
 					<div class="form-control EBS" id="output_text"></div>
@@ -166,48 +188,77 @@
 				<input type="text" class="form-control PRR" placeholder="">
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-PRR" data-toggle="detail-PRR"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-PRR">
+			<div id="detail-PRR" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">PRE</span>
 					<div class="form-control PRE" id="output_text"></div>
 				</div>
+				<div class="input-group">
+					<span class="input-group-addon detail">TXP</span>
+					<input type="text" class="form-control TXP" placeholder="">
+				</div>
+				<div class="input-group po-markup">
+					<span class="input-group-addon po-link detail">TXR</span>
+						<div class="po-content hidden">
+				          	<div class="po-title">
+				            	Necessary items
+				            </div> <!-- ./po-title -->
+				            <div class="po-body">
+				              <h4 class="text-center">
+				                  PRR, TXP
+				              </h4>
+				            </div><!-- ./po-body -->
+					    </div>  <!-- ./po-content -->
+					<div class="form-control TXR" id="output_text"></div>
+				</div>
 			</div>
 
-			<div class="input-group">
-				<span class="input-group-addon">TXP</span>
-				<input type="text" class="form-control TXP" placeholder="">
-			</div>
-			<div class="input-group po-markup">
-				<span class="input-group-addon po-link">TXR</span>
-					<div class="po-content hidden">
-			          	<div class="po-title">
-			            	Necessary items
-			            </div> <!-- ./po-title -->
-			            <div class="po-body">
-			              <h4 class="text-center">
-			                  PRR, TXP
-			              </h4>
-			            </div><!-- ./po-body -->
-				    </div>  <!-- ./po-content -->
-				<div class="form-control TXR" id="output_text"></div>
-			</div>
 
 			<div class="input-group">
 				<span class="input-group-addon">NER</span>
 				<input type="text" class="form-control NER" placeholder="">
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-NER" data-toggle="detail-NER"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-NER">
+			<div id="detail-NER" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">NET</span>
 					<div class="form-control NET" id="output_text"></div>
+				</div>
+				<div class="input-group po-markup">
+					<span class="input-group-addon po-link">NSO</span>
+						<div class="po-content hidden">
+				          	<div class="po-title">
+				            	Calculated NSO
+				            </div> <!-- ./po-title -->
+				            <div class="po-body">
+				              <h4 class="text-center">
+				                  NER, EPS
+				              </h4>
+				            </div><!-- ./po-body -->
+					    </div>  <!-- ./po-content -->
+					<div class="form-control NSOcalc" id="output_text"></div>
+				</div>
+
+				<div class="input-group po-markup">
+					<span class="input-group-addon po-link">EPS</span>
+						<div class="po-content hidden">
+				          	<div class="po-title">
+				            	Calculated EPS
+				            </div> <!-- ./po-title -->
+				            <div class="po-body">
+				              <h4 class="text-center">
+				                  NER, NSO
+				              </h4>
+				            </div><!-- ./po-body -->
+					    </div>  <!-- ./po-content -->
+					<div class="form-control EPS" id="output_text"></div>
 				</div>
 			</div>
 		</div>
 
 <!-- BALANCE SHEET -->
 
-		<div class="col-md-4 column BS">
+		<div class="col-md-4 column" id="balance_sheet">
 			<div class="input-group">
 				<span class="input-group-addon">TAS1</span>
 				<input type="text" class="form-control TAS_1" placeholder="">
@@ -254,7 +305,7 @@
 				<div class="form-control TBV" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-TBV" data-toggle="detail-TBV"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-TBV">
+			<div id="detail-TBV" class="small">
 				<div class="input-group po-markup">
 					<span class="input-group-addon po-link detail">IBV</span>
 						<div class="po-content hidden">
@@ -267,7 +318,7 @@
 				              </h4>
 				            </div><!-- ./po-body -->
 					    </div>  <!-- ./po-content -->
-					<input type="text" class="form-control" placeholder="">
+					<input type="text" class="form-control IBV" placeholder="">
 				</div>
 				<div class="input-group detail">
 					<span class="input-group-addon detail">FA</span>
@@ -295,7 +346,7 @@
 				<div class="form-control NWC" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-NWC" data-toggle="detail-NWC"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-NWC">
+			<div id="detail-NWC" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">CA</span>
 					<input type="text" class="form-control CA" placeholder="Current assets">
@@ -312,7 +363,7 @@
 				<div class="form-control NDT" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-NDT" data-toggle="detail-NDT"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-NDT">
+			<div id="detail-NDT" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">Cash</span>
 					<input type="text" class="form-control cash" placeholder="Cash">
@@ -355,7 +406,7 @@
 				<div class="form-control ENT" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-ENT" data-toggle="detail-ENT"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-ENT">
+			<div id="detail-ENT" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">P</span>
 					<input type="text" class="form-control price" placeholder="Share price (end)">
@@ -459,7 +510,7 @@
 		</div>
 
 <!-- CASH FLOW -->
-		<div class="col-md-4 column CF ">
+		<div class="col-md-4 column" id="cash_flow">
 			<div class="input-group">
 				<span class="input-group-addon">CFO</span>
 				<input type="text" class="form-control CFO" placeholder="">
@@ -526,8 +577,8 @@
 			</div>
 
 
-			<!-- MATH -->
-			<div class="input-group po-markup">
+<!-- MATH -->
+			<div class="input-group po-markup" id="math">
 				<span class="input-group-addon po-link">SUM</span>
 					<div class="po-content hidden">
 			          	<div class="po-title">
@@ -542,7 +593,7 @@
 				<div class="form-control SUM" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-SUM" data-toggle="detail-SUM"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-SUM">
+			<div id="detail-SUM" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">+</span>
 					<input type="text" class="form-control plus_1" placeholder="">
@@ -579,7 +630,7 @@
 				<div class="form-control RES" id="output_text"></div>
 				<span class="btn input-group-addon toggle-btn toggle" id="dropdown-detail-RES" data-toggle="detail-RES"><span class="glyphicon glyphicon-wrench"></span></span>
 			</div>
-			<div id="detail-RES">
+			<div id="detail-RES" class="small">
 				<div class="input-group">
 					<span class="input-group-addon detail">/</span>
 					<input type="text" class="form-control DIV" placeholder="divide SUM">

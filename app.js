@@ -58,14 +58,22 @@ var main = function function_name (argument) {
 				  	};
 				$('.GRM').html(GRM.toFixed(3));
 
+				var RDE = parseFloat($('.RDE').val()) || 0;
+				var SGE = parseFloat($('.SGE').val()) || 0;
+				var TCE = parseFloat($('.TCE').val()) || 0;
+				var OPE = RDE + SGE + TCE || 0;
+				$('.OPE').html(OPE.toFixed(3));
+
 				var DPA = parseFloat($('.DPA').val()) || 0;
 				var EBI = parseFloat($('.EBI').val()) || 0;
 				var EBT = DPA + EBI || 0;
 				$('.EBT').html(EBT.toFixed(3));
 
+				var GPS = parseFloat($('.GPS').val()) || 0;				
+				var NSOcalc = NER / GPS || 0;
 				var EPS = NET / NSO || 0;
+				$('.NSOcalc').html(NSOcalc.toFixed(3));
 				$('.EPS').html(EPS.toFixed(3));
-
 
 // Balance sheet calculations
 
@@ -87,6 +95,12 @@ var main = function function_name (argument) {
 
 	var BPS = SHE_1 / END || 0;
 	$('.BPS').html(BPS.toFixed(3));
+
+	var IBV = parseFloat($('.IBV').val()) || 0;
+	var TNB = (SHE_1 - IBV) || 0;
+	var TBV = TNB / END || 0;
+	$('.TBV').html(TBV.toFixed(3));
+	$('.TNB').html(TNB.toFixed(3));
 
 	var CA = parseFloat($('.CA').val()) || 0;
 	var CL = parseFloat($('.CL').val()) || 0;
@@ -257,9 +271,34 @@ $(document).ready(function() {
 
   });
 
+
+
+
+  // navigation click actions	
+	$('.scroll-link').on('click', function(event){
+		event.preventDefault();
+		var sectionID = $(this).attr("data-id");
+		scrollToID('#' + sectionID, 750);
+	});
+	// scroll to top action
+	$('.scroll-top').on('click', function(event) {
+		event.preventDefault();
+		$('html, body').animate({scrollTop:0}, 'slow'); 		
+	});
+
 });
 
-
+// scroll function
+function scrollToID(id, speed){
+	var offSet = 50;
+	var targetOffset = $(id).offset().top - offSet;
+	var mainNav = $('#main-nav');
+	$('html,body').animate({scrollTop:targetOffset}, speed);
+	if (mainNav.hasClass("open")) {
+		mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+		mainNav.removeClass("open");
+	}
+}
 
 }; //end of main fun
 
