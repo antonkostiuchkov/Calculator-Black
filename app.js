@@ -75,6 +75,31 @@ var main = function function_name (argument) {
 				$('.NSOcalc').html(NSOcalc.toFixed(3));
 				$('.EPS').html(EPS.toFixed(3));
 
+
+				//BANK
+				var NII = parseFloat($('.NII').val()) || 0;
+				var FCI = parseFloat($('.FCI').val()) || 0;
+				var TDI = parseFloat($('.TDI').val()) || 0;
+				var DII = parseFloat($('.DII').val()) || 0;
+				var OtherInc = parseFloat($('.OtherInc').val()) || 0;
+				var TIN = NII + FCI + TDI + DII + OtherInc || 0;
+				$('.TIN').html(TIN.toFixed(3));
+
+				var LLP = parseFloat($('.LLP').val()) || 0;
+				var EBI_bank = LLP + PRE || 0;
+				$('.EBI_bank').html(EBI_bank.toFixed(3));
+
+				var LNS_1 = parseFloat($('.LNS_1').val()) || 0;
+				var LNS_0 = parseFloat($('.LNS_0').val()) || 0;
+				var NIM = NII / ((LNS_1 + LNS_0) / 2) * 100 || 0;
+				var NIMx4 = NII / ((LNS_1 + LNS_0) / 2) * 400 || 0;
+					$('.NIM').html(NIM.toFixed(3));
+					$('.NIMx4').html(NIMx4.toFixed(3));
+
+
+				var EFR = OPE / TIN * 100 || 0;
+				$('.EFR').html(EFR.toFixed(3));
+
 // Balance sheet calculations
 
 	var TAS_1 = parseFloat($('.TAS_1').val()) || 0;
