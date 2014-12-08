@@ -146,6 +146,11 @@ var main = function function_name (argument) {
 	var ENT = NDT + MNT + (price * END) || 0;
 	$('.ENT').html(ENT.toFixed(3));
 
+
+	var Invested_Cap = (SHE_1 + MNT) + NDT || 0;
+	var RIC = ((EBI - TXP) / Invested_Cap) * 100 || 0;
+	$('.RIC').html(RIC.toFixed(3));
+
 	var FA = parseFloat($('.FA').val()) || 0;
 	var RNA = NET / (FA + NWC) || 0;
 	var RNAx4 = RNA * 4 || 0;
